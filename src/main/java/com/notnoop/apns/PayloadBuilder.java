@@ -195,6 +195,16 @@ public final class PayloadBuilder {
     }
 
     /**
+     * JHH Patch to allow mutable content to be set
+     * @return
+     */
+    public PayloadBuilder addMutableContent() {
+        aps.put("mutable-content", 1);
+        return this;
+    }
+
+
+    /**
      * Requests clearing of the badge number next to the application
      * icon.
      *
